@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class Reception extends JFrame implements ActionListener {
-     JButton newCustomer, rooms, department, allEmployee, managerInfo, customers, searchRoom, update;
+     JButton newCustomer, rooms, department, allEmployee, managerInfo, customers, searchRoom, update, roomStatus;
     Reception() {
         
         getContentPane().setBackground(Color.WHITE);
@@ -66,10 +66,11 @@ public class Reception extends JFrame implements ActionListener {
         update.addActionListener(this);
         add(update);
         
-        JButton roomStatus = new JButton ("Update Room Status");
+        roomStatus = new JButton ("Update Room Status");
         roomStatus.setBounds(10, 350, 200, 30);
         roomStatus.setBackground(Color.BLACK);
         roomStatus.setForeground(Color.WHITE);
+        roomStatus.addActionListener(this);
         add(roomStatus);
         
         JButton pickup = new JButton ("Pickup Service");
@@ -126,7 +127,10 @@ public class Reception extends JFrame implements ActionListener {
         } else if (ae.getSource() == update) {
             setVisible(false);
             new UpdateCheck();
-        }
+        } else if (ae.getSource() == roomStatus) {
+            setVisible(false);
+            new UpdateRoom();
+        } 
     }
     
     public static void main(String[] args) {
