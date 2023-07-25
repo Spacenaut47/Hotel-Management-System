@@ -125,7 +125,7 @@ public class AddDriver extends JFrame implements ActionListener{
           
           try {
              Conn conn = new Conn();
-             String str = "inseart into driver values('"+name+"', '"+age+"', '"+gender+"', '"+company+"', '"+brand+"', '"+available+"', '"+location+"')";
+             String str = "insert into driver values('"+name+"', '"+age+"', '"+gender+"', '"+company+"', '"+brand+"', '"+available+"', '"+location+"')";
              
              conn.s.executeUpdate(str);
              
