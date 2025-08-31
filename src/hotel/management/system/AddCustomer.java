@@ -1,10 +1,6 @@
 package hotel.management.system;
 
-import javax.swing.*;
-import java.awt.*;
-import java.sql.*;
-import java.util.Date;
-import java.awt.event.*;
+
 
 public class AddCustomer extends JFrame implements ActionListener {
     
